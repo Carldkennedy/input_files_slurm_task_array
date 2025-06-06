@@ -9,7 +9,7 @@
 
 FILES_PER_TASK=10
 
-mapfile -t paths < fst_files.txt
+mapfile -t paths < input_files.txt
 start=$((SLURM_ARRAY_TASK_ID * FILES_PER_TASK))
 end=$((start + FILES_PER_TASK - 1))
 

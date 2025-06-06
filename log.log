@@ -1,1 +1,0 @@
-find $PWD -name *.fst > fst_files.txt

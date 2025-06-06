@@ -7,8 +7,10 @@
 #SBATCH --output=logs/test1_%A_%a.out
 #SBATCH --error=logs/test1_%A_%a.err
 
-mapfile -t paths < fst_files.txt
+mapfile -t paths < input_files.txt
 
-fst_file="${paths[$SLURM_ARRAY_TASK_ID]}"
-echo "Would run: $fst_file"
+input_file="${paths[$SLURM_ARRAY_TASK_ID]}"
+echo "Would run: $input_file"
 
+echo_test_one_per_task.sh: Using a text file containing filenames of input
+files.

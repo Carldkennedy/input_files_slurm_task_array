@@ -7,11 +7,11 @@
 #SBATCH --output=logs/%A_%a.log
 #SBATCH --error=logs/%A_%a.err
 
-mapfile -t paths < fst_files.txt
+mapfile -t paths < input_files.txt
 
-fst_file="${paths[$SLURM_ARRAY_TASK_ID]}"
-base=$(basename "$fst_file")
-outfile="${fst_file}.out"
+input_file="${paths[$SLURM_ARRAY_TASK_ID]}"
+base=$(basename "$input_file")
+outfile="${input_file}.out"
 
-echo "Processing: $fst_file" > "$outfile"
+echo "Processing: $input_file" > "$outfile"
 
