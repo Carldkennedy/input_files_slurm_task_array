@@ -14,17 +14,20 @@ The scripts included illustrate how to:
 
 1. Create directories and generate some test input `.inp` files:
 
-To run through the examples in this repo, we need to create logs directory and test_inputs dir with random file names.
+To run through the examples in this repo, we create `logs` and `test_inputs` directories, 
+and files with non-sequential names by running the `setup.sh` script.
 
 ```bash
 source setup.sh
 ```
 
-2. Submit the SLURM job array:
+2. Submit each SLURM job array, for example:
 
 ```bash
 sbatch echo_test_one_per_task.sh`
 ```
+
+After each task array has finished inspect output files in `logs` and `test_inputs`.
 
 ## Files
 `echo_test_one_per_task.sh`: Processes input files listed in a text file, one
