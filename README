@@ -1,0 +1,7 @@
+# Make directories for log files and input files
+mkdir -p test_fsts
+mkdir -p logs
+
+# Create list of files and output to txt file
+find $PWD/test_fsts -name "*.fst" | sort > fst_files.txt
+
