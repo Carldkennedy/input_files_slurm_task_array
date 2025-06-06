@@ -1,9 +1,6 @@
 # Make directories for log files
 mkdir -p logs
 
-# Create list of files and output to txt file
-find $PWD/test_fsts -name "*.fst" | sort > fst_files.txt
-
 # Create some random files to read
 mkdir -p test_fsts
 for name in a b c d e f g h i j; do
@@ -11,3 +8,6 @@ for name in a b c d e f g h i j; do
     touch "test_fsts/${name}_$i.fst"
   done
 done
+
+# Create list of files and output to txt file
+find $PWD/test_fsts -name "*.fst" | sort > fst_files.txt
